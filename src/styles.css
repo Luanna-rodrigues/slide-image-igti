@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+img {
+    max-width: 500px;
+    max-height: 333px;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 4%;
+}
+
+span {
+    padding: 10px;
+}
+
+button {
+    margin: 2px;
+}
+
+.carousel {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.carousel-inner {
+    display: flex;
+}
+
+.body-button {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,28 @@
+<section class="container">
+    <section class="text-center">
+        <h1>Galeria de fotos!</h1>
+    </section>
+
+    <section class="col-sm-12">
+        <section>
+            <ul class="carousel">
+                <li *ngFor="let item of items; let i = index">
+                    <img class="center" [src]="item.path" alt="{{item.title}}" id="{{i}}" *ngIf="i === indexSelected">
+                </li>
+            </ul>
+        </section>
+
+        <section class="body-button">
+            <button class="bbtn btn-secondary" [disabled]="indexSelected === 0" (click)="first()"> |< </button>
+            <button class="btn btn-outline-primary" [disabled]="indexSelected === 0" (click)="next()">
+                < 
+            </button>
+            <span>
+                {{indexSelected + 1}}  to {{items.length}} 
+            </span>
+            <button class="btn btn-outline-primary" [disabled]="((items.length - 1) === indexSelected)" (click)="prev()"> > </button>
+            <button class="btn btn-secondary" [disabled]="((items.length - 1) === indexSelected)" (click)="last()"> >| </button>
+        </section>
+
+    </section>
+</section>
